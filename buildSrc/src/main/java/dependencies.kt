@@ -6,13 +6,14 @@ object Versions {
     const val minSdk = 14
     const val targetSdk = 28
     const val versionCode = 1
-    const val versionName = "1.0"
+    const val versionName = "SNAPSHOT"
+    const val groupId = "com.ivianuu.rxjavaktx"
 
-    const val androidGradlePlugin = "3.3.0-alpha10"
-    const val androidx = "1.0.0-rc02"
+    const val androidGradlePlugin = "3.2.0"
+    const val androidx = "1.0.0"
     const val kotlin = "1.3.0-rc-57"
     const val mavenGradle = "2.1"
-    const val rxJava = "2.2.1"
+    const val rxJava = "2.2.2"
     const val rxKotlin = "2.3.0"
 }
 
