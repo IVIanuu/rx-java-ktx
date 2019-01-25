@@ -33,21 +33,4 @@ dependencies {
     implementation(Deps.rxKotlin)
 }
 
-val sourcesJar = task("sourcesJar", Jar::class) {
-    dependsOn("classes")
-    from(sourceSets["main"].allSource)
-    classifier = "sources"
-}
-
-val javadoc = tasks.getByName("javadoc") as Javadoc
-
-val javadocJar = task("javadocJar", Jar::class) {
-    dependsOn(javadoc)
-    classifier = "javadoc"
-    from(javadoc.destinationDir)
-}
-
-artifacts {
-    add("archives", sourcesJar)
-    add("archives", javadocJar)
-}
+apply(from = "https://raw.githubusercontent.com/IVIanuu/gradle-scripts/master/mvn-sources.gradle")
