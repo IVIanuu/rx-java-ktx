@@ -17,20 +17,13 @@
 plugins {
     id("java-library")
     id("kotlin")
-    id("com.github.dcendents.android-maven")
 }
 
-group = "com.github.ivianuu"
-
-java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
-}
+apply(from = "https://raw.githubusercontent.com/IVIanuu/gradle-scripts/master/java-compatibility-android.gradle")
+apply(from = "https://raw.githubusercontent.com/IVIanuu/gradle-scripts/master/jitpack-publish.gradle")
 
 dependencies {
     implementation(Deps.kotlinStdLib)
     implementation(Deps.rxJava)
     implementation(Deps.rxKotlin)
 }
-
-apply(from = "https://raw.githubusercontent.com/IVIanuu/gradle-scripts/master/mvn-sources.gradle")
